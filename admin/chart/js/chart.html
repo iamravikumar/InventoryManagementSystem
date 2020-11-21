@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "theme2",//theme1
+		title:{
+			text: "DCB"              
+		},
+		animationEnabled: false,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "splineArea", "area", "spline", "pie",etc.
+			type: "spline", 
+			dataPoints: [
+				{ label: "Demand",  y: 100},
+				{ label: "Collection", y: 35  },
+				{ label: "Balance", y: 65},
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+ <script type="text/javascript" src="jquery.canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 600px; width: 600px;"></div>
+</body>
+</html>
